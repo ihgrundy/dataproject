@@ -21,7 +21,7 @@ activityrecognition '@' smartlab.ws
 
 Experiments were carried out with a group of 30 volunteers ("subjects") within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity were captured at a constant rate of 50Hz. The experiments were video-recorded to label the data manually. The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers were selected for generating the training data and 30% the test data. 
 
-Using the accompanying file "run\_analysis.R", the training and the test sets created by Reyes-Ortiz et. al. were merged to create one data set. The size (width) of the dataset was reduced by selecting only those columns corresponding to the means and standard deviations (i.e including only measurement variables whose name contained mean() or std()). Descriptive activity names replaced activity numbers in the dataset.
+Using the accompanying file "run\_analysis.R", the "raw" training and the test sets created by Reyes-Ortiz et. al. were merged to create a single data set. The eventual size (width) of the dataset was reduced by selecting only those columns corresponding to the means and standard deviations (i.e. including only measurement variables whose name contained mean() or std()). Descriptive activity names replaced activity numbers in the dataset.
 
 From this data set, a new independent tidy data set was created consisting of four columns: "subject", "activity", "measurement" and "mean", where the "measurement" column contains the *names* of the measurement variables, and the "mean" column contains the average of each measurement variable for each activity and each subject.
 
@@ -46,7 +46,7 @@ Space-delimited text file
 
 1. subject
 
-        description: volunteer number
+        description: volunteer ID number
         
         values: integer (1 - 30)  
         
@@ -60,7 +60,7 @@ Space-delimited text file
         
 3. measurement
 
-        description: measurement names
+        description: measurement names (accelerometer data)
         
         values: (66)    tBodyAcc-mean()-X,tBodyAcc-mean()-Y,tBodyAcc-mean()-Z,tBodyAcc-std()-X,
         
